@@ -7,22 +7,12 @@ const HappyPack = require('happypack')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const SentryPlugin = require('webpack-sentry-plugin')
 
-const localesHash = require('./i18n/localesHash')
-const resourcesHash = require('./i18n/resourcesHash')
-
 const pjson = require('./package.json')
 
 const config = (env = {}, argv) => {
   const isProductionMode = argv.mode === 'production'
   const country = (env.country || 'sg').toUpperCase()
-  const locales = ['en'].concat(localesHash[country])
-  const resources = locales.reduce(
-    (previous, current) => {
-      previous[current] = {
-        common: resourcesHash[current]
-      }
-      return previous
-    }, {})
+
   return {
     entry: {
       'app': [
@@ -93,7 +83,7 @@ const config = (env = {}, argv) => {
         SERVER_ENV: env.server || 'test',
         COUNTRY: country,
         LANGUAGE: {
-          resources
+          // resources
         }
       }),
       new ExtractTextPlugin({
