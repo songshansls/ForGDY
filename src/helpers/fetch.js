@@ -2,10 +2,11 @@ import fetch from 'isomorphic-fetch'
 import SERVER from 'constants/server'
 import Cookies from 'js-cookie'
 
+const DEFAULT_SERVER = process.env.NODE_ENV === 'production' ? SERVER : 'localhost:4321'
 export const myFetch = ({
   url,
   ssl = false,
-  server = 'localhost:4321',
+  server = DEFAULT_SERVER,
   // version = '',
   resource,
   subResource,
