@@ -1,0 +1,41 @@
+:global {
+  & html,
+  & body,
+  & #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: system-ui;
+  }
+
+  & #root{
+    min-height: 100%;
+  }
+  & body {
+    overflow: hidden;
+  }
+  & a:link{
+    text-decoration:none;
+  }
+  & input{
+    border: 0;
+  }
+  & ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  & ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+  }
+
+  & ::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: rgba(180, 180, 180, 0.5);
+  }
+}
+
+@value --mobile (max-width: 600px);
+@value --tablet (max-width: 900px);
+@value --desktop (min-width: 900px);
+@value --large-desktop (min-width: 1441px);
