@@ -1,13 +1,13 @@
 import fetch from 'helpers/fetch'
 
 export const fetchToken = async ({ callback }) => {
-  const resource = 'api/getTokenByAcc'
+  const url = 'api/getTokenByAcc'
   const params = {
     loginName: 'c201031zyjc',
     password: 'c201031zyjc'
   }
   const { data } = await fetch({
-    resource,
+    url,
     params
   })
   callback(data)
@@ -15,7 +15,7 @@ export const fetchToken = async ({ callback }) => {
 }
 
 export const fetchRealTimeData = async ({ token, callback }) => {
-  const resource = 'api/data/getRealtimeData'
+  const url = 'api/data/getRealtimeData'
   const params = {
     deviceIds: '40098450'
   }
@@ -23,7 +23,7 @@ export const fetchRealTimeData = async ({ token, callback }) => {
     token
   }
   const { data } = await fetch({
-    resource,
+    url,
     params,
     headers
   })

@@ -25,8 +25,9 @@ export const myFetch = ({
   uri += subResource ? `/${subResource}` : ''
   uri += suffix ? `/${suffix}` : ''
   uri += extension ? `.${extension}` : '/'
-  uri += '?' + Object.entries(params).filter(([ key, value ]) => value).map(([ key, value ]) => `${key}=${encodeURIComponent(value)}`).join('&&')
   uri = url || uri
+  uri += '?' + Object.entries(params).filter(([ key, value ]) => value).map(([ key, value ]) => `${key}=${encodeURIComponent(value)}`).join('&&')
+  
   // params = {
   //   ...params,
   //   SPC_CDS: Cookies.get('SPC_CDS'),
