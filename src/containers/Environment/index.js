@@ -13,7 +13,7 @@ import pm10Icon from 'assets/img/pm10.png'
 import pm25Icon from 'assets/img/pm25.png'
 import windDirectionIcon from 'assets/img/wd360.png'
 import DataItem from 'components/DataItem'
-import { fetchToken, fetchRealTimeData } from 'api/dust'
+import { fetchToken, fetchRealTimeData, fetchNodeTest } from 'api/dust'
 
 const list = [
   {
@@ -69,7 +69,6 @@ const Environment = () => {
 
   const fetchData = (token) => {
     if(token) {
-      console.log('fetRealTimeData')
       fetchRealTimeData({
         token: token.token,
         callback: setData
@@ -80,6 +79,7 @@ const Environment = () => {
     fetchToken({
       callback: setToken
     })
+    fetchNodeTest()
   }, [])
 
   useEffect(() => {

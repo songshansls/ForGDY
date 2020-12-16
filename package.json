@@ -14,8 +14,11 @@
   "license": "ISC",
   "dependencies": {
     "antd": "^4.1.4",
+    "axios": "^0.21.0",
     "babel-polyfill": "^6.23.0",
+    "cors": "^2.8.5",
     "es6-promise": "^4.2.2",
+    "express": "^4.17.1",
     "file-saver": "^2.0.2",
     "happypack": "5.0.0-beta.3",
     "i18next": "^10.2.2",
