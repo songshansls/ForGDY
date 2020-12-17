@@ -9,7 +9,6 @@ const DataItem = (props) => {
       <div>{typeof number !== 'number' ?  '--' : number}</div>
       <div>{label}</div>
     </div>
-
   )
 }
 

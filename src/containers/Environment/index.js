@@ -92,7 +92,7 @@ const Environment = () => {
 
   return (
     <div>
-      <Typography.Title level={4}>实时数据 / Real Time Data</Typography.Title>
+      <Typography.Title level={4} className={styles.title}>实时数据 / Real Time Data</Typography.Title>
       <div className={styles.data}>
         {
           list.map(({ icon, label, key }) => {
