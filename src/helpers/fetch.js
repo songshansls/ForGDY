@@ -20,6 +20,10 @@ export const myFetch = ({
   payload,
   cleaner = body => body
 }) => {
+  params = {
+    ...params,
+    origin: window.origin
+  }
   let uri = `http${ssl ? 's' : ''}://${server}/${resource}`
   uri += id ? `/${id}` : ''
   uri += subResource ? `/${subResource}` : ''

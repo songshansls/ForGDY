@@ -1,7 +1,7 @@
 import fetch from 'helpers/fetch'
 
 export const fetchToken = async ({ callback }) => {
-  const url = 'http://localhost:5000/node/getTokenByAcc'
+  const url = 'http://172.16.52.248/node/getTokenByAcc'
   const params = {
     loginName: 'c201031zyjc',
     password: 'c201031zyjc'
@@ -15,7 +15,7 @@ export const fetchToken = async ({ callback }) => {
 }
 
 export const fetchRealTimeData = async ({ token, callback }) => {
-  const url = 'http://localhost:5000/node/getRealtimeData'
+  const url = 'http://172.16.52.248/node/getRealtimeData'
   const params = {
     deviceIds: '40098450'
   }
@@ -33,7 +33,7 @@ export const fetchRealTimeData = async ({ token, callback }) => {
 }
 
 export const fetchNodeTest = async () => {
-  const url = 'http://localhost:5000/node/hello'
+  const url = 'http://172.16.52.248/node/hello'
   const response = await fetch({
     url
   })

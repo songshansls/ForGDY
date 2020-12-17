@@ -5,7 +5,7 @@ const cors = require('cors')
 const app = express()
 const port = process.env.PORT || 5000
 const corsOptions = {
-  origin: 'http://localhost:4321',
+  origin: 'http://172.16.52.248',
   credentials: true
 }
 
